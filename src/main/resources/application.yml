@@ -1,14 +1,8 @@
 server:
   port: 8761
-security:
-  basic:
-    enabled: true #开启认证
-  user:
-    name: user
-    password: 123qwe!@#
 eureka:
   instance:
-    hostname: localhost
+    hostname: 10.10.181.166
   client:
     registerWithEureka: false
     fetchRegistry: false
@@ -16,3 +10,6 @@ eureka:
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
 logging:
   level: debug
+management:
+  security:
+    enabled: false
